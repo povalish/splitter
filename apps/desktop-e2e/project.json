@@ -1,0 +1,52 @@
+{
+  "name": "desktop-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/desktop-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nxkit/playwright:test",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "outputPath": "dist/apps/desktop-e2e/test-results",
+        "playwrightConfig": "apps/desktop-e2e/playwright.config.ts",
+        "devServerTarget": "desktop:make"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "desktop:make"
+        }
+      }
+    },
+    "debug": {
+      "executor": "@nxkit/playwright:test",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "outputPath": "dist/apps/desktop-e2e/test-results",
+        "playwrightConfig": "apps/desktop-e2e/playwright.config.ts",
+        "devServerTarget": "desktop:make",
+        "debug": true
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "desktop:make"
+        }
+      }
+    },
+    "show-report": {
+      "executor": "@nxkit/playwright:show-report",
+      "options": {
+        "reportPath": "dist/apps/desktop-e2e/playwright-report"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/desktop-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["desktop"]
+}

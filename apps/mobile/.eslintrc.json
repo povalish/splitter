@@ -1,0 +1,7 @@
+{
+  "extends": ["plugin:@nx/react", "../../.eslintrc.json"],
+  "settings": {
+    "import/ignore": ["react-native"]
+  },
+  "ignorePatterns": ["**/*.js"]
+}

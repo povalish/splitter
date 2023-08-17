@@ -1,0 +1,24 @@
+{
+  "name": "desktop",
+  "productName": "Desktop",
+  "version": "1.0.0",
+  "main": ".vite/build/main.js",
+  "license": "MIT",
+  "config": {
+    "forge": "./tools/forge/forge.config.js"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "*",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies" : {
+    "@electron-forge/cli": "*",
+    "@electron-forge/maker-deb": "*",
+    "@electron-forge/maker-rpm": "*",
+    "@electron-forge/maker-squirrel": "*",
+    "@electron-forge/maker-zip": "*",
+    "@electron-forge/plugin-vite": "*",
+    "electron": "*"
+  }
+}

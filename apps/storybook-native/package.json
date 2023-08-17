@@ -1,0 +1,24 @@
+{
+  "name": "storybook-native",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-native": "*",
+    "@testing-library/react-native": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-svg": "*",
+    "metro-config": "*",
+    "@storybook/react-native": "*",
+    "@testing-library/react": "*",
+    "@storybook/addon-ondevice-actions": "*",
+    "@storybook/addon-ondevice-backgrounds": "*",
+    "@storybook/addon-ondevice-controls": "*",
+    "@storybook/addon-ondevice-notes": "*",
+    "@react-native-async-storage/async-storage": "*",
+    "react-native-safe-area-context": "*",
+    "@storybook/react": "*",
+    "class-variance-authority": "*",
+    "react-native-reanimated": "*"
+  }
+}
