@@ -9,6 +9,13 @@ import { Tab } from '@ui-kit/components/tab/Tab';
 const meta: Meta<typeof Tab> = {
   component: Tab,
   title: 'Components/Tab',
+  decorators: [
+    (Story) => (
+      <section className='w-screen h-screen bg-colorBackground -m-[1rem]'>
+        <Story />
+      </section>
+    ),
+  ],
 };
 
 export default meta;
