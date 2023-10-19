@@ -18,8 +18,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ui-kit/*": [
-        "libs/ui-kit/*"
+      "@ui-kit/*": ["libs/ui-kit/*"],
+      "@sb-react/*": [
+        "apps/storybook-react/src/*"
       ]
     }
   },
