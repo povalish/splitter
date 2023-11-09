@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Toggle } from '@ui-kit/components/toggle/Toggle';
 import { Decorator } from '@sb-react/utils/Decorator';

@@ -1,20 +1,20 @@
 import React, { useId } from 'react';
 
 import { IWebInput } from './Input.interface';
-import { container, label, input } from './Input.classes';
+import { container, label as labelStyles, input } from './Input.classes';
 
 //
 //
 
-export const Input: React.FC<IWebInput> = ({ className, value, ...inputProps }) => {
+export const Input: React.FC<IWebInput> = ({ className, value, label, ...inputProps }) => {
   const id = useId();
 
   return (
-    <div className={container()}>
-      <label htmlFor={id} className={label({ active: !!value })}>
-        What’s main focus for today?
+    <div className={container({ className })}>
+      <label htmlFor={id} className={labelStyles({ active: !!value })}>
+        {label}
       </label>
-      <input id={id} className={input({ className })} type='text' value={value} {...inputProps} />
+      <input id={id} className={input()} type='text' value={value} {...inputProps} />
     </div>
   );
 };

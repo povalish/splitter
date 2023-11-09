@@ -28,6 +28,7 @@ export const label = cva(
 );
 
 export const input = cva(`
+  w-full
   bg-transparent px-3 py-2 
   border-b-[3px] border-b-colorText
   text-colorText text-base font-bold

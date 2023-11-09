@@ -1,12 +1,5 @@
-import { Application } from '../src/Application';
-
-//
-//
+import { MainScreen } from '../src/MainScreen';
 
 export default async function Index() {
-  return (
-    <div className='wrapper'>
-      <Application />
-    </div>
-  );
+  return <MainScreen />;
 }
