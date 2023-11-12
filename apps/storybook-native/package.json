@@ -19,6 +19,7 @@
     "react-native-safe-area-context": "*",
     "@storybook/react": "*",
     "class-variance-authority": "*",
-    "react-native-reanimated": "*"
+    "react-native-reanimated": "*",
+    "@nx/react": "*"
   }
 }

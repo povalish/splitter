@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Input } from '@ui-kit/components/input/Input';
-import { Decorator } from '@sb-react/utils/Decorator';
+import { Input } from '@ui-kit/components/input/Input.native';
+import { Decorator } from '../utils/Decorator';
 
 // Config
 //
@@ -25,20 +25,14 @@ type Story = StoryObj<typeof Input>;
 // Stories
 //
 
-// Sandbox Button
+// Default
 //
 
-export const TextInput: Story = {
+export const DefaultInput: Story = {
   render: () => {
     const [value, setValue] = useState('');
     return (
-      <Input
-        label='Text input'
-        type='text'
-        className='min-w-[300px]'
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      />
+      <Input label='Text input' className='min-w-[300px]' value={value} onChangeText={setValue} />
     );
   },
 };

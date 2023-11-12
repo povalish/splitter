@@ -7,4 +7,4 @@ export interface IInput {
 
 export interface IWebInput extends InputHTMLAttributes<HTMLInputElement>, IInput {}
 
-export interface INativeInput extends TextInputProps {}
+export interface INativeInput extends TextInputProps, IInput {}
