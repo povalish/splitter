@@ -20,7 +20,8 @@ export default defineConfig(({ mode }) => {
       alias: {
         $src: path.join(rootDir, 'src'),
         '@ui-kit': path.join(rootDir, '../../libs/ui-kit/'),
+        '@modules': path.join(rootDir, '../../libs/modules/src/'),
       },
-    }
+    },
   };
 });

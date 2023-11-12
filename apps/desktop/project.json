@@ -9,7 +9,7 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "apps/desktop",
-        "command": "electron-forge start"
+        "command": "electron-forge start -- --inspect-electron"
       }
     },
     "make": {

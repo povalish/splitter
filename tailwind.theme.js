@@ -23,6 +23,9 @@ module.exports = {
         colorDangerPressed: '#A63629',
         colorDangerHover: '#FF6A58',
         colorAccent: '#458588',
+        colorPeriodFocusing: '#282828',
+        colorPeriodShortBreak: '#254A4B',
+        colorPeriodLongBreak: '#173C51',
       },
     },
     textShadow: {
