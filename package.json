@@ -1,6 +1,6 @@
 {
-  "name": "@mk-3/source",
-  "version": "0.0.0",
+  "name": "timer",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {},
   "private": true,
