@@ -4,17 +4,17 @@ import { Screen } from '@ui-kit/layouts/screen/Screen';
 import { Input } from '@ui-kit/components/input/Input';
 import { Button } from '@ui-kit/components/button/Button';
 
-import { Periods } from '../Periods';
-import { Countdown } from '../Countdown';
+import { Periods } from '@modules/timer/views/Periods';
+import { Countdown } from '@modules/timer/views/Countdown';
 
 //
 //
 
-export const TimerScreen: React.FC = () => {
+export const Timer: React.FC = () => {
   const [inputText, setInputText] = useState('');
   return (
-    <Screen>
-      <div className='container mx-auto w-full h-full flex flex-col'>
+    <Screen className='w-screen h-screen'>
+      <div className='container mx-auto w-full h-full px-4 flex flex-col'>
         <main className='flex flex-grow flex-col items-center justify-center gap-6'>
           <Periods />
           <Countdown seconds={120} />

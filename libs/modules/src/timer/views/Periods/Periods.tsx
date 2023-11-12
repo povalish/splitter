@@ -9,7 +9,7 @@ import { Tab } from '@ui-kit/components/tab/Tab';
 export const Periods: React.FC = () => {
   const [selected, setSelected] = useState('tab-1');
   return (
-    <ul role='tablist' className='flex gap-2'>
+    <ul role='tablist' className='flex gap-0 sm:gap-2 flex-nowrap'>
       <li role='presentation'>
         <Tab
           label='focusing'

@@ -21,6 +21,7 @@
     "react-dom": "18.2.0",
     "react-native": "0.71.10",
     "react-native-reanimated": "^3.4.1",
+    "react-router-dom": "^6.18.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
