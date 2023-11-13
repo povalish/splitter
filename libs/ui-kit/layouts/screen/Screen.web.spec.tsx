@@ -5,9 +5,9 @@ import { Screen } from './Screen';
 //
 //
 
-describe('Screen component', () => {
+describe('Screen layout', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Screen>Screen content</Screen>);
+    const { baseElement } = render(<Screen>Content</Screen>);
     expect(baseElement).toMatchSnapshot();
   });
 });

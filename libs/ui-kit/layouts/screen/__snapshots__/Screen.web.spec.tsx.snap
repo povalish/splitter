@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screen layout should render successfully 1`] = `
+<body>
+  <div>
+    <div
+      class="
+  w-full h-full bg-colorBackground
+  transition-colors
+"
+    >
+      Content
+    </div>
+  </div>
+</body>
+`;

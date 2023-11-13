@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle component should render successfully 1`] = `
+<body>
+  <div>
+    <label
+      class="
+  relative
+  hover:cursor-pointer
+  group
+  focus:outline-none
+"
+      data-testid="toggle-input"
+      for=":r0:"
+      tabindex="0"
+    >
+      <span
+        class="text-colorText text-sm mb-2 group-focus-within:text-colorAccent"
+      >
+        Toggle
+      </span>
+      <input
+        class="sr-only peer"
+        id=":r0:"
+        type="checkbox"
+      />
+      <div
+        class="
+  w-[85px] h-[40px] rounded-[54px] py-2 px-3
+  bg-colorBackgroundContrast
+  flex items-center justify-between
+  group-focus-within:border-[3px] group-focus-within:border-colorAccent 
+  group-focus-within:shadow-focus
+"
+      />
+      <span
+        class="
+  text-sm font-bold
+  transition-all
+  absolute bottom-2.5 left-3 
+  text-colorSuccess
+  opacity-0 peer-checked:opacity-100
+  select-none
+"
+      >
+        On
+      </span>
+      <div
+        class="
+  w-[28px] h-[28px] rounded-full
+  absolute
+  bottom-[6px] left-[8px] bg-colorDisabled
+  peer-checked:translate-x-10 peer-checked:bg-colorSuccess
+  transition-all
+"
+      />
+      <span
+        class="
+  text-sm font-bold
+  transition-all
+  absolute bottom-2.5 right-3 
+  text-colorDisabled
+  opacity-100 peer-checked:opacity-0
+  select-none
+"
+      >
+        Off
+      </span>
+    </label>
+  </div>
+</body>
+`;

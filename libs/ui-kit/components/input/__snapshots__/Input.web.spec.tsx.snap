@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component should render successfully 1`] = `
+<body>
+  <div>
+    <div
+      class="relative pt-3 group min-w-[300px]"
+    >
+      <label
+        class="
+  absolute 
+  text-colorText whitespace-nowrap 
+
+  group-focus-within:text-colorAccent
+  group-focus-within:top-[-5px] group-focus-within:left-0 
+  group-focus-within:text-sm group-focus-within:font-normal
+
+  transition-all 
+  pointer-events-none
+ top-[20px] left-3 text-base font-bold"
+        for=":r0:"
+      >
+        Text input
+      </label>
+      <input
+        class="
+  w-full
+  bg-transparent px-3 py-2 
+  border-b-[3px] border-b-colorText
+  text-colorText text-base font-bold
+
+  disabled:bg-colorDisabled disabled:border-colorDisabled disabled:scale-100 disabled:cursor-not-allowed
+  focus:border-b-[3px] focus:border-colorAccent focus:outline-none
+
+  transition-all
+"
+        id=":r0:"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</body>
+`;
