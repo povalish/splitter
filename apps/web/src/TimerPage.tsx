@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { cx } from 'class-variance-authority';
 
@@ -10,17 +12,23 @@ import { Periods as PeriodsEnum } from '@modules/timer/types/Periods';
 import { Countdown } from '@modules/timer/views/Countdown';
 import { useSwitchingPeriods } from '@modules/timer/hooks/useSwitchingPeriods';
 import { getBackgroundByPeriod } from '@modules/timer/utils/getBackgroundByPeriod';
+import { useDocumentTitle } from './utils/useDocumentTitle';
+import { toMinutesAndSeconds } from '@modules/timer/utils/formatSeconds';
 
 //
 //
 
-export const Timer: React.FC = () => {
+export const TimerPage: React.FC = () => {
   const [inputText, setInputText] = useState('');
   const { timer, period, isActivePeriod, handleStartPause, startNewPeriod } = useSwitchingPeriods({
     initPeriod: PeriodsEnum.Focusing,
   });
 
   const bg = getBackgroundByPeriod(period);
+  useDocumentTitle({
+    title:
+      timer === 0 ? 'Pomogator' : `${period.toLocaleUpperCase()} | ${toMinutesAndSeconds(timer)}`,
+  });
 
   return (
     <Screen className={cx('w-screen h-screen', bg)}>

@@ -14,11 +14,11 @@ type Options = {
 
 export function useSwitchingPeriods(options?: Options) {
   const { isAutoSwitchPeriod, initPeriod } = options || { isAutoSwitchPeriod: false };
-  const [currPeriod, setCurrPeriod] = useState<Periods | null>(initPeriod || null);
+  const [currPeriod, setCurrPeriod] = useState<Periods>(initPeriod || Periods.Focusing);
   const prevPeriod = useRef<Periods | null>(null);
   const shortBreakCounter = useRef(0);
   const { count, start, stop, reset, isActive } = useCountdown({
-    seconds: getSecondsByPeriod(initPeriod),
+    seconds: getSecondsByPeriod(initPeriod || Periods.Focusing),
   });
 
   // Actions

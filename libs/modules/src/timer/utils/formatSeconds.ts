@@ -16,3 +16,8 @@ export function formatSeconds(secondsNumber: number) {
     seconds: format(seconds),
   };
 }
+
+export function toMinutesAndSeconds(secondsNumber: number) {
+  const { minutes, seconds } = formatSeconds(secondsNumber);
+  return `${minutes}:${seconds}`;
+}
