@@ -16,7 +16,7 @@ import { getBackgroundByPeriod } from '@modules/timer/utils/getBackgroundByPerio
 
 export const Timer: React.FC = () => {
   const [inputText, setInputText] = useState('');
-  const { timer, period, isActivePeriod, handleStartPause, startNewPeriod } = useSwitchingPeriods({
+  const { timer, period, isActivePeriod, startOrPause, startNewPeriod } = useSwitchingPeriods({
     initPeriod: PeriodsEnum.Focusing,
   });
 
@@ -31,7 +31,7 @@ export const Timer: React.FC = () => {
           <Button
             className='min-w-[175px]'
             variant={isActivePeriod ? 'danger' : 'success'}
-            onClick={handleStartPause}
+            onClick={startOrPause}
           >
             {isActivePeriod ? 'Pause' : 'Start'}
           </Button>

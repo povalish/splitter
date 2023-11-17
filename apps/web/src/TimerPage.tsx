@@ -20,7 +20,7 @@ import { toMinutesAndSeconds } from '@modules/timer/utils/formatSeconds';
 
 export const TimerPage: React.FC = () => {
   const [inputText, setInputText] = useState('');
-  const { timer, period, isActivePeriod, handleStartPause, startNewPeriod } = useSwitchingPeriods({
+  const { timer, period, isActivePeriod, startOrPause, startNewPeriod } = useSwitchingPeriods({
     initPeriod: PeriodsEnum.Focusing,
   });
 
@@ -39,7 +39,7 @@ export const TimerPage: React.FC = () => {
           <Button
             className='min-w-[175px]'
             variant={isActivePeriod ? 'danger' : 'success'}
-            onClick={handleStartPause}
+            onClick={startOrPause}
           >
             {isActivePeriod ? 'Pause' : 'Start'}
           </Button>

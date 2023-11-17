@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "*",
-    "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "react-router-dom": "*"
   },
   "devDependencies" : {
     "@electron-forge/cli": "*",

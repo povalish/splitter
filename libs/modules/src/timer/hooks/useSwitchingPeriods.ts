@@ -66,7 +66,7 @@ export function useSwitchingPeriods(options?: Options) {
     }
   };
 
-  const handleStartPause = () => {
+  const startOrPause = () => {
     if (isActive) {
       stop();
     }
@@ -95,8 +95,7 @@ export function useSwitchingPeriods(options?: Options) {
     period: currPeriod,
     isActivePeriod: isActive,
     startNewPeriod,
-    startNextPeriod,
     stopCurrentPeriod: stop,
-    handleStartPause,
+    startOrPause,
   };
 }
