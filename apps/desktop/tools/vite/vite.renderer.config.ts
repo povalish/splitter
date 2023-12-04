@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
@@ -9,6 +10,7 @@ const rootDir = process.cwd();
  * Renderer process - Vite configuration
  */
 export default defineConfig(({ mode }) => {
+  // @ts-ignore
   process.env.NODE_ENV = mode; // Force use mode (fixes HMR for vite plugins)
 
   return {

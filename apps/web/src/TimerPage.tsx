@@ -34,7 +34,7 @@ export const TimerPage: React.FC = () => {
     <Screen className={cx('w-screen h-screen', bg)}>
       <div className='container mx-auto w-full h-full px-4 flex flex-col'>
         <main className='flex flex-grow flex-col items-center justify-center gap-6'>
-          <Periods active={period} onChange={(p) => startNewPeriod(p, true)} />
+          <Periods active={period} onChange={(p) => startNewPeriod(p)} />
           <Countdown seconds={timer} />
           <Button
             className='min-w-[175px]'

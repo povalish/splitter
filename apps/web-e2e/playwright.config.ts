@@ -1,17 +1,16 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
 import { devices } from '@playwright/test';
+import { config as dotenvConfig } from 'dotenv';
 
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config();
+//
+//
 
-/**
- * See https://playwright.dev/docs/test-configuration for more information
- */
+dotenvConfig({ path: '../../env.test' });
 
 const baseURL = process.env.E2E_BASE_URL || 'http://localhost:4200/';
+
+//
+//
 
 export const config: PlaywrightTestConfig = {
   testDir: './src/e2e',
@@ -24,15 +23,14 @@ export const config: PlaywrightTestConfig = {
   use: {
     actionTimeout: 0,
     baseURL,
-    trace: 'on-first-retry',
+    video: 'on',
   },
   reporter: [
     ['html', { outputFolder: '../../dist/apps/web-e2e/playwright-report' }],
     [
       'json',
       {
-        outputFile:
-          '../../dist/apps/web-e2e/playwright-report/test-results.json',
+        outputFile: '../../dist/apps/web-e2e/playwright-report/test-results.json',
       },
     ],
   ],
