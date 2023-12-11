@@ -24,10 +24,15 @@ export function useSwitchingPeriods(options?: Options) {
   // Actions
   //
 
-  const startNewPeriod = (period: Periods, withReset = true) => {
-    setCurrPeriod(period);
+  const startNewPeriod = (period: Periods) => {
+    switchPeriod(period);
+    prevPeriod.current = null;
+    shortBreakCounter.current = 0;
+  };
 
-    if (!withReset) prevPeriod.current = currPeriod;
+  const switchPeriod = (period: Periods) => {
+    setCurrPeriod(period);
+    prevPeriod.current = currPeriod;
 
     if (period === Periods.Focusing) {
       reset(FOCUSING_SECONDS);
@@ -44,29 +49,29 @@ export function useSwitchingPeriods(options?: Options) {
 
   const startNextPeriod = () => {
     if (!prevPeriod.current) {
-      startNewPeriod(Periods.Focusing);
+      switchPeriod(Periods.Focusing);
     }
 
     if (prevPeriod.current === Periods.Focusing) {
-      if (shortBreakCounter.current <= 3) {
-        startNewPeriod(Periods.ShortBreak);
+      if (shortBreakCounter.current < 2) {
+        switchPeriod(Periods.ShortBreak);
         shortBreakCounter.current += 1;
       } else {
-        startNewPeriod(Periods.LognBreak);
-        shortBreakCounter.current += 0;
+        switchPeriod(Periods.LognBreak);
+        shortBreakCounter.current = 0;
       }
     }
 
     if (prevPeriod.current === Periods.ShortBreak) {
-      startNewPeriod(Periods.Focusing);
+      switchPeriod(Periods.Focusing);
     }
 
     if (prevPeriod.current === Periods.LognBreak) {
-      startNewPeriod(Periods.Focusing);
+      switchPeriod(Periods.Focusing);
     }
   };
 
-  const handleStartPause = () => {
+  const startOrPause = () => {
     if (isActive) {
       stop();
     }
@@ -95,8 +100,7 @@ export function useSwitchingPeriods(options?: Options) {
     period: currPeriod,
     isActivePeriod: isActive,
     startNewPeriod,
-    startNextPeriod,
     stopCurrentPeriod: stop,
-    handleStartPause,
+    startOrPause,
   };
 }

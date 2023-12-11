@@ -37,6 +37,12 @@
         }
       }
     },
+    "start:test-env": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "env-cmd -f .env.test nx run web:start"
+      }
+    },
     "export": {
       "executor": "@nx/next:export",
       "options": {

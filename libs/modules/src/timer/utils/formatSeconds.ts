@@ -7,7 +7,7 @@ export function formatSeconds(secondsNumber: number) {
   const minutes = Math.floor(minutesLeft / 60);
   const seconds = secondsNumber % 60;
 
-  const format = (n: number): string | number => (n < 10 ? '0' + n : n);
+  const format = (n: number): string | number => (n < 10 ? '0' + n : String(n));
 
   return {
     days: format(days),

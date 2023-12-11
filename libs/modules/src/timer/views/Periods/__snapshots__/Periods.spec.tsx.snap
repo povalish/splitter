@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TIMER MODULES - VIEWS - Periods component should render successfully 1`] = `
+<body>
+  <div>
+    <ul
+      class="flex gap-0 sm:gap-2 flex-nowrap"
+      role="tablist"
+    >
+      <li
+        role="presentation"
+      >
+        <button
+          aria-selected="true"
+          class="
+  text-[20px] text-colorText font-bold whitespace-nowrap
+  md:text-[24px]
+ 
+  py-2 px-3
+  transition-all
+  active:scale-95
+  hover:scale-105
+  focus:text-colorAccent focus:opacity-100 focus:text-shadow focus:outline-none
+ opacity-100"
+          id="focusing"
+          role="tab"
+          type="button"
+        >
+          focusing
+        </button>
+      </li>
+      <li
+        role="presentation"
+      >
+        <button
+          aria-selected="false"
+          class="
+  text-[20px] text-colorText font-bold whitespace-nowrap
+  md:text-[24px]
+ 
+  py-2 px-3
+  transition-all
+  active:scale-95
+  hover:scale-105
+  focus:text-colorAccent focus:opacity-100 focus:text-shadow focus:outline-none
+ opacity-50"
+          id="shortbreak"
+          role="tab"
+          type="button"
+        >
+          short break
+        </button>
+      </li>
+      <li
+        role="presentation"
+      >
+        <button
+          aria-selected="false"
+          class="
+  text-[20px] text-colorText font-bold whitespace-nowrap
+  md:text-[24px]
+ 
+  py-2 px-3
+  transition-all
+  active:scale-95
+  hover:scale-105
+  focus:text-colorAccent focus:opacity-100 focus:text-shadow focus:outline-none
+ opacity-50"
+          id="lognbreak"
+          role="tab"
+          type="button"
+        >
+          long break
+        </button>
+      </li>
+    </ul>
+  </div>
+</body>
+`;

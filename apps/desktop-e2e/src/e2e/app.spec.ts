@@ -1,5 +1,11 @@
-import { test, expect, ElectronApplication, _electron as electron } from '@playwright/test';
+import { ElectronApplication, _electron as electron } from '@playwright/test';
 import { findLatestBuild, parseElectronApp } from 'electron-playwright-helpers';
+
+import { FOCUSING_SECONDS } from '@modules/timer/constants/SECONDS';
+import { Periods } from '@modules/timer/types/Periods';
+import { toMinutesAndSeconds } from '@modules/timer/utils/formatSeconds';
+
+import { test } from '../fixtures/timer';
 
 //
 //
@@ -23,8 +29,52 @@ test.afterAll(async () => {
 //
 //
 
-test('Run desktop app', async () => {
-  const window = await electronApp.firstWindow();
-  const title = await window.getByText('Hello from Nextjs');
-  expect(title).toBeVisible();
+// test('Run desktop app', async () => {
+//   const window = await electronApp.firstWindow();
+//   const title = await window.getByText('Hello from Nextjs');
+//   expect(title).toBeVisible();
+// });
+
+test('timer workflow', async ({ timerScreen }) => {
+  test.setTimeout(80 * 1000);
+
+  await timerScreen.fillInput('Keep calm and make some code');
+
+  await timerScreen.waitForFocusing();
+
+  await timerScreen.waitForShortBreak();
+
+  await timerScreen.waitForFocusing();
+
+  await timerScreen.waitForShortBreak();
+
+  await timerScreen.waitForFocusing();
+
+  await timerScreen.waitForLongBreak();
+
+  await timerScreen.timeShouldBe(toMinutesAndSeconds(FOCUSING_SECONDS));
+});
+
+test('when select new period switching order should be reseted', async ({ timerScreen }) => {
+  test.setTimeout(80 * 1000);
+
+  await timerScreen.waitForFocusing();
+
+  await timerScreen.selectPeriod(Periods.LognBreak);
+  await timerScreen.waitForLongBreak();
+
+  // Default workflow
+  await timerScreen.waitForFocusing();
+
+  await timerScreen.waitForShortBreak();
+
+  await timerScreen.waitForFocusing();
+
+  await timerScreen.waitForShortBreak();
+
+  await timerScreen.waitForFocusing();
+
+  await timerScreen.waitForLongBreak();
+
+  await timerScreen.timeShouldBe(toMinutesAndSeconds(FOCUSING_SECONDS));
 });

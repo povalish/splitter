@@ -31,7 +31,7 @@ export function useCountdown({ isIncrement = false, isAutostart = false, seconds
   };
 
   useEffect(() => {
-    let timerID: NodeJS.Timer | undefined = undefined;
+    let timerID: ReturnType<typeof setTimeout> | undefined = undefined;
 
     if (isActive) {
       timerID = setTimeout(() => {

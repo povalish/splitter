@@ -8,8 +8,11 @@ interface ICountdown {
   seconds: number;
 }
 
-export const Countdown: React.FC<ICountdown> = ({ seconds }) => (
-  <h1 className='text-[114px] text-center font-bold'>
-    {formatSeconds(seconds).minutes}:{formatSeconds(seconds).seconds}
-  </h1>
-);
+export const Countdown: React.FC<ICountdown> = ({ seconds }) => {
+  const time = formatSeconds(seconds);
+  return (
+    <h1 className='text-[114px] text-center font-bold'>
+      {time.minutes}:{time.seconds}
+    </h1>
+  );
+};
