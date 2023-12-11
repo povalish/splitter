@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tab component should render successfully 1`] = `
+<body>
+  <div>
+    <button
+      aria-controls="panel-1"
+      aria-selected="true"
+      class="
+  text-[20px] text-colorText font-bold whitespace-nowrap
+  md:text-[24px]
+ 
+  py-2 px-3
+  transition-all
+  active:scale-95
+  hover:scale-105
+  focus:text-colorAccent focus:opacity-100 focus:text-shadow focus:outline-none
+ opacity-100"
+      id="tab-1"
+      role="tab"
+      type="button"
+    >
+      focusing
+    </button>
+  </div>
+</body>
+`;

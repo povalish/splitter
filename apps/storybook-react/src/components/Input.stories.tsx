@@ -33,6 +33,7 @@ export const TextInput: Story = {
     const [value, setValue] = useState('');
     return (
       <Input
+        label='Text input'
         type='text'
         className='min-w-[300px]'
         value={value}

@@ -1,5 +1,4 @@
 import { InputHTMLAttributes } from 'react';
-import { TextInputProps } from 'react-native';
 
 export interface IToggle {
   label: string;
@@ -7,4 +6,8 @@ export interface IToggle {
 
 export interface IWebToggle extends InputHTMLAttributes<HTMLInputElement>, IToggle {}
 
-export interface INativeToggle extends TextInputProps {}
+export interface INativeToggle extends IToggle {
+  value?: boolean;
+  onChange?: (newValue: boolean) => void;
+  className?: string;
+}

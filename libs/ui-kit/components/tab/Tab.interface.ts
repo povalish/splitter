@@ -9,7 +9,7 @@ export interface ITab {
 
 export interface IWebTab extends ITab {
   tabId: string;
-  panelId: string;
+  panelId?: string;
 }
 
 export interface INativeTab extends ITab {}

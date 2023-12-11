@@ -18,14 +18,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@modules/*": [
+        "libs/modules/src/*"
+      ],
       "@sb-react/*": [
         "apps/storybook-react/src/*"
       ],
       "@ui-kit/*": [
         "libs/ui-kit/*"
-      ],
-      "@modules/*": [
-        "libs/modules/src/*"
       ]
     }
   },

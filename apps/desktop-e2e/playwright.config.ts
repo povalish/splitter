@@ -25,14 +25,14 @@ export const config: PlaywrightTestConfig = {
     actionTimeout: 0,
     baseURL,
     trace: 'on-first-retry',
+    video: 'on',
   },
   reporter: [
     ['html', { outputFolder: '../../dist/apps/desktop-e2e/playwright-report' }],
     [
       'json',
       {
-        outputFile:
-          '../../dist/apps/desktop-e2e/playwright-report/test-results.json',
+        outputFile: '../../dist/apps/desktop-e2e/playwright-report/test-results.json',
       },
     ],
   ],

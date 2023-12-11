@@ -5,7 +5,7 @@ import { cva } from 'class-variance-authority';
 
 export const textClasses = cva(
   `
-  text-[20px] text-colorText font-bold
+  text-[20px] text-colorText font-bold whitespace-nowrap
   md:text-[24px]
 `,
   {

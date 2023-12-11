@@ -9,12 +9,13 @@
     "src/**/*.stories.js",
     "src/**/*.stories.jsx",
     "src/**/*.stories.tsx",
+    "src/**/*.tsx",
     "../../libs/ui-kit/**/*.tsx",
     "../../libs/ui-kit/**/*.ts",
     "src/**/*.stories.mdx",
     ".storybook/*.js",
     ".storybook/*.ts",
     "*.ts",
-    "*.tsx"
+    "*.tsx",
   ]
 }

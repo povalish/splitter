@@ -18,3 +18,17 @@ $ cd apps/desktop && yarn install
 $ npx nx run storybook-react:build
 $ npx nx run storybook-react:start
 ```
+
+### Run storybook for React Native components
+```bash
+# open simulator by your own hands (just for me)
+$ npx nx run storybook-native:run-ios -- --simulator="iPhone 14"
+$ npx nx run storybook-native:run-android
+$ npx nx run storybook-native:start # start dev server
+```
+
+### Run dev build
+```bash
+$ npx nx run web:start
+$ npx nx run desktop:start
+```

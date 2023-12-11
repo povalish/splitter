@@ -4,18 +4,25 @@
   "projectType": "application",
   "sourceRoot": "apps/web-e2e/src",
   "targets": {
-    "e2e": {
+    "run": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "env-cmd -f .env.test nx run web-e2e:start"
+      }
+    },
+    "run:debug": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "env-cmd -f .env.test nx run web-e2e:debug"
+      }
+    },
+    "start": {
       "executor": "@nxkit/playwright:test",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
         "outputPath": "dist/apps/web-e2e/test-results",
         "playwrightConfig": "apps/web-e2e/playwright.config.ts",
-        "devServerTarget": "web:serve:development"
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "web:serve:production"
-        }
+        "devServerTarget": "web:start"
       }
     },
     "debug": {
@@ -23,14 +30,7 @@
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
         "outputPath": "dist/apps/web-e2e/test-results",
-        "playwrightConfig": "apps/web-e2e/playwright.config.ts",
-        "devServerTarget": "web:serve:development",
-        "debug": true
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "web:serve:production"
-        }
+        "playwrightConfig": "apps/web-e2e/playwright.config.ts"
       }
     },
     "show-report": {
