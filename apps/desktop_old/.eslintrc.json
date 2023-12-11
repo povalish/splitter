@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "plugin:@nx/react-typescript",
+    "../../.eslintrc.json"
+  ],
+  "ignorePatterns": ["**/*.js"]
+}
