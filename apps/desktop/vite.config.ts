@@ -18,7 +18,8 @@ export default defineConfig(({ command }) => {
     resolve: {
       alias: {
         '@': path.join(__dirname, 'src'),
-        '@ui-kit': path.join(__dirname, '../../libs/ui-kit/')
+        '@ui-kit': path.join(__dirname, '../../libs/ui-kit/'),
+        '@modules': path.join(__dirname, '../../libs/modules/src')
       },
     },
     plugins: [

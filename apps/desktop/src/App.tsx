@@ -1,14 +1,10 @@
-import { Button } from '@ui-kit/components/button/Button';
+import { RouterProvider } from 'react-router-dom';
+import './tailwind.css';
+import { router } from './navigation/router';
 
-console.log('[App.tsx]', `Hello world from Electron ${process.versions.electron}!`);
+// Router
+//
 
-function App() {
-  return (
-    <div className='App'>
-      Electron App
-      <Button className='min-w-[175px]'>Start</Button>
-    </div>
-  );
-}
+const App = () => <RouterProvider router={router} />;
 
 export default App;
