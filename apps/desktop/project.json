@@ -40,6 +40,13 @@
         "command": "rm -rf node_modules/ build/ dist/ dist-electron/ release/"
       }
     },
+    "install": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/desktop",
+        "command": "yarn"
+      }
+    },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": [
