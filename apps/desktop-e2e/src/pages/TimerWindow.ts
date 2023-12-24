@@ -29,19 +29,31 @@ export class TimerWindow {
   public async waitForFocusing() {
     await this.timeShouldBe(toMinutesAndSeconds(FOCUSING_SECONDS));
     await this.clickStart();
-    await this.page.waitForTimeout((Number(FOCUSING_SECONDS) + 1) * 1000);
+
+    await this.page.waitForTimeout(5 * 1000);
+
+    await this.pauseTimer();
+    await this.timeShouldBe(toMinutesAndSeconds(FOCUSING_SECONDS - 5));
   }
 
   public async waitForShortBreak() {
     await this.timeShouldBe(toMinutesAndSeconds(SHORT_BREAK_SECONDS));
     await this.clickStart();
-    await this.page.waitForTimeout((Number(SHORT_BREAK_SECONDS) + 1) * 1000);
+
+    await this.page.waitForTimeout(5 * 1000);
+
+    await this.pauseTimer();
+    await this.timeShouldBe(toMinutesAndSeconds(SHORT_BREAK_SECONDS - 5));
   }
 
   public async waitForLongBreak() {
     await this.timeShouldBe(toMinutesAndSeconds(LONG_BREAK_SECONDS));
     await this.clickStart();
-    await this.page.waitForTimeout((Number(LONG_BREAK_SECONDS) + 1) * 1000);
+
+    await this.page.waitForTimeout(5 * 1000);
+
+    await this.pauseTimer();
+    await this.timeShouldBe(toMinutesAndSeconds(LONG_BREAK_SECONDS - 5));
   }
 
   public async selectPeriod(period: Periods) {

@@ -18,6 +18,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@tools/*": [
+        "tools/*"
+      ],
       "@modules/*": [
         "libs/modules/src/*"
       ],

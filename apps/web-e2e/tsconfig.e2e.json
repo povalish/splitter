@@ -6,5 +6,11 @@
     "allowJs": true,
     "types": ["node"]
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "../../libs/modules/src/**/*.tsx", "../../libs/modules/src/**/*.ts", "playwright.config.ts"]
+  "include": [
+    "src/**/*.ts", 
+    "src/**/*.js", 
+    "../../libs/modules/src/**/*.tsx", 
+    "../../libs/modules/src/**/*.ts", 
+    "playwright.config.ts"
+  ]
 }

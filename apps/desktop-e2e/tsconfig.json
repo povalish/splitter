@@ -1,10 +1,12 @@
 {
   "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
+  },
   "files": [],
-  "include": [],
-  "references": [
-    {
-      "path": "./tsconfig.e2e.json"
-    }
-  ]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+  ],
 }

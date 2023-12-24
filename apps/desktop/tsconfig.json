@@ -1,4 +1,5 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
@@ -15,13 +16,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
   },
-  "include": ["src", "electron"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src", 
+    "electron",
+    "../../libs/modules/src/**/*.tsx",
+    "../../libs/modules/src/**/*.ts"
+  ],
+  "exclude": ["*.config.js"]
 }
