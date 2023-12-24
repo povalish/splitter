@@ -1,7 +1,43 @@
 {
-  "extends": ["plugin:@nx/react", "../../.eslintrc.json"],
+  "extends": [
+    "plugin:@nx/react",
+    "../../.eslintrc.json"
+  ],
   "settings": {
-    "import/ignore": ["react-native"]
+    "import/ignore": [
+      "react-native"
+    ]
   },
-  "ignorePatterns": ["**/*.js"]
+  "ignorePatterns": [
+    "!**/*",
+    "public",
+    ".cache",
+    "node_modules",
+    "**/*.js"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.js",
+        "*.jsx"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
+      "rules": {}
+    }
+  ]
 }

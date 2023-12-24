@@ -3,10 +3,17 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/mobile/src",
   "projectType": "application",
-  "implicitDependencies": ["ui-kit"],
+  "implicitDependencies": [
+    "ui-kit", "modules"
+  ],
   "targets": {
     "start": {
       "executor": "@nx/react-native:start",
+      "dependsOn": [
+        "ensure-symlink",
+        "sync-deps",
+        "pod-install"
+      ],
       "options": {
         "port": 8081
       }
@@ -19,11 +26,21 @@
     },
     "run-ios": {
       "executor": "@nx/react-native:run-ios",
+      "dependsOn": [
+        "ensure-symlink",
+        "sync-deps",
+        "pod-install"
+      ],
       "options": {}
     },
     "bundle-ios": {
       "executor": "@nx/react-native:bundle",
-      "outputs": ["{options.bundleOutput}"],
+      "dependsOn": [
+        "ensure-symlink"
+      ],
+      "outputs": [
+        "{options.bundleOutput}"
+      ],
       "options": {
         "entryFile": "src/main.tsx",
         "platform": "ios",
@@ -32,6 +49,10 @@
     },
     "run-android": {
       "executor": "@nx/react-native:run-android",
+      "dependsOn": [
+        "ensure-symlink",
+        "sync-deps"
+      ],
       "options": {}
     },
     "build-android": {
@@ -40,11 +61,22 @@
         "{projectRoot}/android/app/build/outputs/bundle",
         "{projectRoot}/android/app/build/outputs/apk"
       ],
+      "dependsOn": [
+        "ensure-symlink",
+        "sync-deps"
+      ],
       "options": {}
     },
     "build-ios": {
       "executor": "@nx/react-native:build-ios",
-      "outputs": ["{projectRoot}/ios/build/Build"],
+      "outputs": [
+        "{projectRoot}/ios/build/Build"
+      ],
+      "dependsOn": [
+        "ensure-symlink",
+        "sync-deps",
+        "pod-install"
+      ],
       "options": {}
     },
     "pod-install": {
@@ -53,7 +85,12 @@
     },
     "bundle-android": {
       "executor": "@nx/react-native:bundle",
-      "outputs": ["{options.bundleOutput}"],
+      "dependsOn": [
+        "ensure-symlink"
+      ],
+      "outputs": [
+        "{options.bundleOutput}"
+      ],
       "options": {
         "entryFile": "src/main.tsx",
         "platform": "android",
@@ -69,24 +106,18 @@
       "options": {}
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/mobile/**/*.{ts,tsx,js,jsx}"]
-      }
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "apps/mobile/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "jestConfig": "apps/mobile/jest.config.ts"
       }
     }
   },

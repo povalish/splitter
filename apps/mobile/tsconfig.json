@@ -3,15 +3,17 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "moduleResolution": "node",
     "skipLibCheck": true,
     "resolveJsonModule": true,
+    "declaration": true,
     "composite": true,
-    "declaration": true
   },
-  "files": ["../../node_modules/@nx/react-native/typings/svg.d.ts"],
-  "include": [],
+  "files": ["../../node_modules/@nx/react-native/typings/svg.d.ts", "src/app.d.ts"],
   "references": [
     {
       "path": "./tsconfig.app.json"
@@ -20,5 +22,6 @@
       "path": "./tsconfig.spec.json"
     }
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "tailwind.config.js"],
+  "include": []
 }
