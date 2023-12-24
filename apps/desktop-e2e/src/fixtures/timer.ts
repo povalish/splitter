@@ -1,5 +1,6 @@
 import { test as base, ElectronApplication, _electron as electron } from '@playwright/test';
 import { findLatestBuild, parseElectronApp } from 'electron-playwright-helpers';
+import DesktopPackageJSON from '../../../desktop/package.json';
 import { TimerWindow } from '../pages/TimerWindow';
 
 //
@@ -8,7 +9,7 @@ import { TimerWindow } from '../pages/TimerWindow';
 let electronApp: ElectronApplication | undefined;
 
 base.beforeAll(async () => {
-  const latestBuild = findLatestBuild('apps/desktop/out');
+  const latestBuild = findLatestBuild(`apps/desktop/release/${DesktopPackageJSON.version}/`);
   const appInfo = parseElectronApp(latestBuild);
 
   electronApp = await electron.launch({

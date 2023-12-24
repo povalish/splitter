@@ -19,8 +19,8 @@ export const buttonClasses = cva(
   py-2 px-3 min-w-[100px]
   border-[3px] rounded-lg border-red 
   transition-all
-  active:scale-95
-  hover:scale-105
+  active:scale-[0.97]
+  hover:scale-[1,02]
   disabled:bg-colorDisabled disabled:border-colorDisabled disabled:scale-100 disabled:cursor-not-allowed
   focus:border-[3px] focus:border-colorAccent focus:scale-105 focus:shadow-focus focus:outline-none
 `,
