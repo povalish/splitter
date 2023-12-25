@@ -5,7 +5,7 @@ import { Screen } from './Screen';
 //
 //
 
-describe('Screen layout', () => {
+describe('UI Kit - Layout - Screen component', () => {
   it('should render successfully', () => {
     const { baseElement } = render(<Screen>Content</Screen>);
     expect(baseElement).toMatchSnapshot();

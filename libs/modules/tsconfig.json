@@ -16,7 +16,7 @@
       }
     ]
   },
-  "files": [],
+  "files": ["src/app.d.ts"],
   "include": [
     "**/*.ts",
     "**/*.tsx",

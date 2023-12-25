@@ -1,12 +1,10 @@
-import React, { PropsWithChildren } from 'react';
-import { IStyled } from '@ui-kit/types/Styled';
+import React from 'react';
 import { screen } from './Screen.classes';
+import { IWebScreen } from './Screen.interface';
 
 //
 //
 
-interface IScreen extends IStyled, PropsWithChildren {}
-
-export const Screen: React.FC<IScreen> = ({ className, children }) => (
+export const Screen: React.FC<IWebScreen> = ({ className, children }) => (
   <div className={screen({ className })}>{children}</div>
 );

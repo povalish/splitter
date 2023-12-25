@@ -20,6 +20,8 @@
     "@storybook/react": "*",
     "class-variance-authority": "*",
     "react-native-reanimated": "*",
-    "@nx/react": "*"
+    "@nx/react": "*",
+    "@testing-library/user-event": "*",
+    "@testing-library/jest-dom": "*"
   }
 }

@@ -3,12 +3,22 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@react-native/metro-config": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*",
+    "react-native-screens": "*",
+    "react-native-safe-area-context": "*",
     "metro-config": "*",
-    "@testing-library/react": "*"
+    "nativewind": "*",
+    "class-variance-authority": "*",
+    "@testing-library/react": "*",
+    "@testing-library/user-event": "*",
+    "@nx/react": "*",
+    "@testing-library/jest-dom": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/native-stack": "*"
   }
 }
