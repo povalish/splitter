@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { View } from 'react-native';
+import { SafeAreaView, View } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { cx } from 'class-variance-authority';
 
@@ -32,9 +32,7 @@ export const TimerScreen: React.FC<ITimerScreen> = () => {
 
   return (
     <Screen className={cx('w-screen h-screen')}>
-      <View
-        className={cx('container mx-auto flex-1 px-4 flex flex-col transition-colors', background)}
-      >
+      <SafeAreaView className={cx('container flex-1 flex flex-col transition-colors', background)}>
         <View className='flex flex-grow flex-col items-center justify-center'>
           <Periods active={period} onChange={(p) => startNewPeriod(p)} />
           <Countdown seconds={timer} />
@@ -48,15 +46,15 @@ export const TimerScreen: React.FC<ITimerScreen> = () => {
           </Button>
         </View>
 
-        <View className='flex justify-center pb-12 md:pb-16 mt-10'>
+        <View className='flex justify-center px-4 pb-6 mt-10'>
           <Input
-            className='w-full sm:max-w-[320px]'
             label='Main focus on this time?'
             value={inputText}
             onChangeText={(text) => setInputText(text)}
+            testID='main-focus-input'
           />
         </View>
-      </View>
+      </SafeAreaView>
     </Screen>
   );
 };

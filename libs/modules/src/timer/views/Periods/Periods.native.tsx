@@ -10,8 +10,8 @@ import { list } from './Periods.classes';
 //
 //
 
-export const Periods: React.FC<IPeriods> = ({ active, onChange }) => (
-  <View role='tablist' className={list()}>
+export const Periods: React.FC<IPeriods> = ({ active, className, onChange }) => (
+  <View role='tablist' className={list({ className })}>
     <View role='presentation'>
       <Tab
         label='focusing'

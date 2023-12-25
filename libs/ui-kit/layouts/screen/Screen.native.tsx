@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { View } from 'react-native';
 
 import { screen } from './Screen.classes';
 import { INativeScreen } from './Screen.interface';
@@ -8,5 +8,5 @@ import { INativeScreen } from './Screen.interface';
 //
 
 export const Screen: React.FC<INativeScreen> = ({ className, children }) => (
-  <SafeAreaView className={screen({ className })}>{children}</SafeAreaView>
+  <View className={screen({ className })}>{children}</View>
 );
