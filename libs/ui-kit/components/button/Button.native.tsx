@@ -15,7 +15,6 @@ export const Button: React.FC<INativeButton> = ({
     {...buttonProps}
     className={buttonClasses({ className, variant })}
     activeOpacity={1}
-    style={{ alignSelf: 'flex-start' }}
   >
     <Text className={textClasses({ variant })}>{children}</Text>
   </TouchableOpacity>

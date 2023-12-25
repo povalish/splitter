@@ -1,5 +1,6 @@
-import { formatSeconds } from '@modules/timer/utils/formatSeconds';
 import React from 'react';
+import { Text } from 'react-native';
+import { formatSeconds } from '@modules/timer/utils/formatSeconds';
 import { countdown } from './Countdown.classes';
 
 //
@@ -12,8 +13,8 @@ interface ICountdown {
 export const Countdown: React.FC<ICountdown> = ({ seconds }) => {
   const time = formatSeconds(seconds);
   return (
-    <h1 className={countdown()}>
+    <Text className={countdown()}>
       {time.minutes}:{time.seconds}
-    </h1>
+    </Text>
   );
 };

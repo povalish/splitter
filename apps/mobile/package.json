@@ -9,12 +9,16 @@
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*",
+    "react-native-screens": "*",
+    "react-native-safe-area-context": "*",
     "metro-config": "*",
     "nativewind": "*",
     "class-variance-authority": "*",
     "@testing-library/react": "*",
     "@testing-library/user-event": "*",
     "@nx/react": "*",
-    "@testing-library/jest-dom": "*"
+    "@testing-library/jest-dom": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/native-stack": "*"
   }
 }
