@@ -8,8 +8,8 @@ import { Input } from '@ui-kit/components/input/Input';
 import { Button } from '@ui-kit/components/button/Button';
 
 import { Periods } from '@modules/timer/views/Periods';
-import { Periods as PeriodsEnum } from '@modules/timer/types/Periods';
 import { Countdown } from '@modules/timer/views/Countdown';
+import { Periods as PeriodsEnum } from '@modules/timer/types/Periods';
 import { useSwitchingPeriods } from '@modules/timer/hooks/useSwitchingPeriods';
 import { getBackgroundByPeriod } from '@modules/timer/utils/getBackgroundByPeriod';
 import { useDocumentTitle } from './utils/useDocumentTitle';

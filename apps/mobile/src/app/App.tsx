@@ -1,23 +1,28 @@
 import React from 'react';
-import { SafeAreaView, StatusBar, Text, View } from 'react-native';
-import { Loader } from '@ui-kit/components/loader/Loader.native';
-import { Button } from '@ui-kit/components/button/Button.native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import { TimerScreen } from '../screens/TimerScreen';
+
+//
+//
+
+export type RootStackParamList = {
+  Timer: undefined;
+  Settings: undefined;
+};
+
+const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 //
 //
 
 export const App = () => (
-  <>
-    <StatusBar barStyle='dark-content' />
-    <SafeAreaView>
-      <Text testID='heading' className='text-2xl text-emerald-300'>
-        Hello from ReactNative
-      </Text>
-      <View className='w-12 h-12 rounded-full bg-slate-300' />
-      <Loader />
-      <Button>Click me!</Button>
-    </SafeAreaView>
-  </>
+  <NavigationContainer>
+    <RootStack.Navigator screenOptions={{ headerShown: false }}>
+      <RootStack.Screen name='Timer' component={TimerScreen} />
+    </RootStack.Navigator>
+  </NavigationContainer>
 );
 
 export default App;

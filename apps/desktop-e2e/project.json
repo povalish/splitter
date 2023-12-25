@@ -10,11 +10,11 @@
       "options": {
         "outputPath": "dist/apps/desktop-e2e/test-results",
         "playwrightConfig": "apps/desktop-e2e/playwright.config.ts",
-        "devServerTarget": "desktop:make"
+        "devServerTarget": "desktop:package"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "desktop:make"
+          "devServerTarget": "desktop:package"
         }
       }
     },
@@ -24,12 +24,12 @@
       "options": {
         "outputPath": "dist/apps/desktop-e2e/test-results",
         "playwrightConfig": "apps/desktop-e2e/playwright.config.ts",
-        "devServerTarget": "desktop:make",
+        "devServerTarget": "desktop:package",
         "debug": true
       },
       "configurations": {
         "production": {
-          "devServerTarget": "desktop:make"
+          "devServerTarget": "desktop:package"
         }
       }
     },

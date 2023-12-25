@@ -18,6 +18,8 @@
     "src/**/*.test.jsx",
     "src/**/*.spec.jsx",
     "src/**/*.d.ts",
+    "../../libs/modules/src/**/*.ts",
+    "../../libs/modules/src/**/*.tsx",
     "../../libs/ui-kit/**/*.ts",
     "../../libs/ui-kit/**/*.tsx"
   ]

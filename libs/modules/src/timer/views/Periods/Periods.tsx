@@ -2,12 +2,13 @@ import React from 'react';
 import { Tab } from '@ui-kit/components/tab/Tab';
 import { IPeriods } from './Periods.interface';
 import { Periods as PeriodsEnum } from '../../types/Periods';
+import { list } from './Periods.classes';
 
 //
 //
 
 export const Periods: React.FC<IPeriods> = ({ active, onChange }) => (
-  <ul role='tablist' className='flex gap-0 sm:gap-2 flex-nowrap'>
+  <ul role='tablist' className={list()}>
     <li role='presentation'>
       <Tab
         label='focusing'

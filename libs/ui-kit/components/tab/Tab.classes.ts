@@ -22,8 +22,8 @@ export const tabClasses = cva(
   `
   py-2 px-3
   transition-all
-  active:scale-95
-  hover:scale-105
+  active:scale-[0.96]
+  hover:scale-[1.02]
   focus:text-colorAccent focus:opacity-100 focus:text-shadow focus:outline-none
 `,
   {

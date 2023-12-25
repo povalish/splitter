@@ -2,7 +2,7 @@
   "testRunner": {
     "args": {
       "$0": "jest",
-      "config": "./jest.config.json"
+      "config": "./jest.config.ts"
     },
     "jest": {
       "setupTimeout": 120000
@@ -35,13 +35,13 @@
     "simulator": {
       "type": "ios.simulator",
       "device": {
-        "type": "iPhone 14"
+        "type": "iPhone 12 Pro Max"
       }
     },
-    "emulator": {
-      "type": "android.emulator",
+    "attached": {
+      "type": "android.attached",
       "device": {
-        "avdName": "Pixel_4a_API_30"
+        "adbName": ".*"
       }
     }
   },
@@ -60,7 +60,7 @@
       "app": "android.release"
     },
     "android.emu.debug": {
-      "device": "emulator",
+      "device": "attached",
       "app": "android.debug"
     }
   }

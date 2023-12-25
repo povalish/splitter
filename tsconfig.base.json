@@ -24,6 +24,9 @@
       "@sb-react/*": [
         "apps/storybook-react/src/*"
       ],
+      "@tools/*": [
+        "tools/*"
+      ],
       "@ui-kit/*": [
         "libs/ui-kit/*"
       ]
