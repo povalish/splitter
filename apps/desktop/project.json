@@ -16,7 +16,7 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "apps/desktop",
-        "command": "tsc && vite build && electron-builder && open ./release/2.2.0/mac/"
+        "command": "tsc && vite build && electron-builder && open ./release/"
       }
     },
     "preview": {
@@ -30,7 +30,7 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "apps/desktop",
-        "command": "open ./release/2.2.0/mac/"
+        "command": "open ./release/"
       }
     },
     "clean": {
