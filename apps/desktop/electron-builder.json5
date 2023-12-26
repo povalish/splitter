@@ -2,7 +2,7 @@
  * @see https://www.electron.build/configuration/configuration
  */
 {
-  "appId": "YourAppID",
+  "appId": "Splitter",
   "asar": true,
   "directories": {
     "output": "release/${version}"
@@ -12,6 +12,7 @@
     "dist"
   ],
   "mac": {
+    "icon": "./public/favicon.ico",
     "artifactName": "${productName}_${version}.${ext}",
     "target": [
       "dmg",
@@ -19,6 +20,7 @@
     ]
   },
   "win": {
+    "icon": "./public/favicon.ico",
     "target": [
       {
         "target": "nsis",
