@@ -51,34 +51,42 @@ Some tools were picked because I like them and it was interesting for me to "con
 ### Core
 
 Basic tools
-- [eslint]()
-- [prettier]()
+- [eslint](https://eslint.org/docs/latest/use/getting-started)
+- [prettier](https://prettier.io/docs/en/install)
 
 Frontend tooks
-- [tailwind css]() for styling
-- [react-hook-form]() for form validation
-- [mobx]() for state management 
-- [jest]() for unit tests
-- [nx worksapce]() for build this monorepo
+- [tailwind css](https://tailwindcss.com) for styling
+- [react-hook-form](https://www.react-hook-form.com) for form validation
+- [mobx](https://mobx.js.org/README.html) for state management 
+- [jest](https://jestjs.io) for unit tests
+- [nx worksapce](https://nx.dev) for build this monorepo
+- [storybook](https://storybook.js.org)
+
+Core tools/libs
+- [react](https://react.dev)
+- [react native](https://reactnative.dev)
+- [electron](https://www.electronjs.org)
+- [vite](https://vitejs.dev)
+- [nextJS](https://nextjs.org)
 
 
 ### Web
 
-For web app used [NextJS]() Framerwork.
+For web app used [NextJS](https://nextjs.org) Framerwork.
 
 
 ### Desktop
 
-For creating desktop app used [Electron]() with [Electron Builder]() tool. For building React code used [Vite]().
+For creating desktop app used [Electron](https://www.electronjs.org) with [Electron Builder](https://www.electron.build/index.html) tool. For building React code used [Vite](https://vitejs.dev).
 
 
 ### Mobiles
 
-Just usual [React Native]().
+Just usual [React Native](https://reactnative.dev).
 
 ### Storybook
 
-[Storybook]() is perfect tool for creating ui elements in an isolated environment. Works well with default html-like comoponents and react-native components.
+[Storybook](https://storybook.js.org) is perfect tool for creating ui elements in an isolated environment. Works well with default html-like comoponents and react-native components.
 
 
 ## Installation
@@ -86,23 +94,23 @@ Just usual [React Native]().
 ### Environment
 
 First of all setup and install NodeJS for your OS.
-Follow the instructions [here]().
+Follow the instructions [here](https://nodejs.org/en).
 
-I use [Warp]() as a terminal, but it's only for OSX. As an alternative - [iTerm]().
+I use [Warp](https://www.warp.dev) as a terminal, but it's only for OSX. As an alternative - [iTerm](https://iterm2.com) or [Neovim](https://www.youtube.com/watch?v=ajmK0ZNcM4Q).
 
-Package manager - [Yarn](). You can use any other package manager, and change Yarn-commands to yours.
+Package manager - [Yarn](https://yarnpkg.com/getting-started/install). You can use any other package manager, and change Yarn-commands to yours.
 
 
 ### React Native
 
-React Native's team wrote good and well-detailed instructions [here]().
+React Native's team wrote good and well-detailed instructions [here](https://reactnative.dev/docs/environment-setup).
 
 
 ## Project Structure
 
 ### NX Workspace 
 
-For building core blocks of this project used [NX Workspace]().
+For building core blocks of this project used [NX Workspace](https://nx.dev).
 
 
 ### Apps
@@ -126,7 +134,7 @@ In the **Libs** placed:
   - react component
   - react native component
   - interface file with types
-  - file with tailwind classes
+  - file with [tailwind](https://tailwindcss.com) classes
   - unit tests for each react/react-native components
 
 
